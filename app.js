@@ -1,11 +1,17 @@
-var app = require('http').createServer(handler), io = require('socket.io').listen(app,
-{
-	log : false
-}), fs = require('fs'), node_static = require('node-static');
+var node_static = require('node-static');
+var file = new(node_static.Server)("./");
 
-app.listen(80);
+var app = require('http').createServer(function (request, response) {
+    file.serve(request, response);
 
-var fileServer = new node_static.Server('./');
+});
+
+var io = require('socket.io')(app)
+
+app.listen(8888, function () {
+    console.log('Server listening at port %d', 8888);
+});
+
 var socketArray = new Array();
 var gameStarted = false;
 var sendState = false;
@@ -34,13 +40,6 @@ var players = [
 	ready : false,
 	dead : true
 }]
-function handler(request, response)
-{
-	request.addListener('end', function()
-	{
-		fileServer.serve(request, response);
-	});
-}
 
 io.sockets.on('connection', function(socket)
 {
