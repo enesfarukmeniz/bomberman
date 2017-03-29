@@ -1,0 +1,23 @@
+{
+  "name": "bomberman",
+  "version": "1.0.0",
+  "description": "simple multiplayer bomberman game",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enesfarukmeniz/bomberman.git"
+  },
+  "authors": [
+    "enesfarukmeniz",
+    "anilsert?"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enesfarukmeniz/bomberman/issues"
+  },
+  "homepage": "https://github.com/enesfarukmeniz/bomberman#readme",
+  "dependencies": {
+    "node-static": "0.7.9",
+    "socket.io": "1.7.3"
+  }
+}
