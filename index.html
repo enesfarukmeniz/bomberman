@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<title>BOMBALAMASYON</title>
+		<script src="/socket.io/socket.io.js" charset="utf-8"></script>
+		<script src="lib/crafty.js?v=0.1" charset="utf-8"></script>
+		<script src="config.js?v=0.1" charset="utf-8"></script>
+		<script src="game.js?v=0.5" charset="utf-8"></script>
+		<script src="socketConnection.js?v=0.3" charset="utf-8"></script>
+		<style>
+			body, html {
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				font-family: Arial;
+				font-size: 20px
+			}
+			#cr-stage {
+				border: 2px solid black;
+				margin: 5px auto;
+				color: white
+			}
+		</style>
+		<script>
+			window.onload = function()
+			{
+				socketInit();
+			}
+		</script>
+	</head>
+	<body>
+		<div id="startDiv" style="margin: 100px auto; width:60%; display: none; float:none;">
+			<div style="width: 190px; height: 150px; float:left;"><img id="player0img" alt = "" src="img/player_empty.png"/>
+				<input id="player0button" type="button" value="Hazırım" onclick="ready();" style=" display: none"/>
+				<div id="player0ready" > </div>
+			</div>
+			<div style="width: 190px; height: 150px; float:left;"><img id="player1img" alt = "" src="img/player_empty.png"/>
+				<input id="player1button" type="button" value="Hazırım" onclick="ready();" style=" display: none"/>
+				<div id="player1ready"> </div>
+			</div>
+			<div style="width: 190px; height: 150px; float:left;"><img id="player2img" alt = "" src="img/player_empty.png"/>
+				<input id="player2button" type="button" value="Hazırım" onclick="ready();" style=" display: none"/>
+				<div id="player2ready"> </div>
+			</div>
+			<div style="width: 190px; height: 150px; float:left;"><img id="player3img" alt = "" src="img/player_empty.png"/>
+				<input id="player3button" type="button" value="Hazırım" onclick="ready();" style=" display: none"/>
+				<div id="player3ready"> </div>
+			</div>
+		</div>
+		<div style="font-family:'Times New Roman'; font-size: 50px; color: #79A; float:none; margin: 300px auto; width:20%;" id="timerDiv"> </div>
+	</body>
+</html>
