@@ -1,6 +1,6 @@
 {
   "name": "bomberman",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple multiplayer bomberman game",
   "main": "app.js",
   "repository": {
